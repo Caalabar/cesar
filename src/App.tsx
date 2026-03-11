@@ -4,6 +4,7 @@
  */
 
 import Hero from './components/Hero';
+import ForWhom from './components/ForWhom';
 import TargetAudience from './components/TargetAudience';
 import Transformation from './components/Transformation';
 import Included from './components/Included';
@@ -19,6 +20,7 @@ export default function App() {
   return (
     <main className="min-h-screen bg-brand-offwhite font-sans text-brand-blue selection:bg-brand-gold/30 selection:text-brand-blue">
       <Hero />
+      <ForWhom />
       <TargetAudience />
       <Transformation />
       <Included />
@@ -29,7 +31,7 @@ export default function App() {
       <Objections />
       <About />
       <FinalCTA />
-      
+
       {/* Footer Simples */}
       <footer className="bg-brand-blue border-t border-brand-gold/10 py-8 text-center text-brand-offwhite/40 text-sm">
         <div className="container mx-auto px-6">
