@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ChevronRight } from 'lucide-react';
+
 
 const bullets = [
     'Pra você que quer aprofundar nos temas bíblicos sobre o funcionamento da alma;',
@@ -30,19 +30,19 @@ export default function ForWhom() {
                     <div className="w-20 h-1 bg-brand-gold mx-auto mt-6 rounded-full" />
                 </motion.div>
 
-                {/* Bullets */}
-                <div className="max-w-2xl mx-auto flex flex-col gap-5">
+                {/* Cards em linha */}
+                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
                     {bullets.map((text, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, x: -24 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 28 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: i * 0.15 }}
-                            className="flex items-start gap-4 bg-brand-offwhite rounded-2xl p-6 shadow-sm border border-brand-gold/10 hover:border-brand-gold/40 hover:shadow-md transition-all duration-300"
+                            className="flex flex-col items-center text-center gap-5 bg-brand-offwhite rounded-2xl p-8 shadow-sm border border-brand-gold/10 hover:border-brand-gold/40 hover:shadow-lg transition-all duration-300"
                         >
-                            <span className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-full bg-brand-gold/15 flex items-center justify-center">
-                                <ChevronRight className="w-5 h-5 text-brand-gold" />
+                            <span className="w-12 h-12 rounded-full bg-brand-gold/15 flex items-center justify-center flex-shrink-0">
+                                <span className="text-brand-gold font-serif font-bold text-lg">{i + 1}</span>
                             </span>
                             <p className="text-brand-blue/85 text-base md:text-lg leading-relaxed">{text}</p>
                         </motion.div>
